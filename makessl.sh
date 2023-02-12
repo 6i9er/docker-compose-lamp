@@ -12,7 +12,7 @@ do
     FILE=../config/vhosts/$servn.conf
     # check if configuration files exists to prevent overwrite custom edits
     if [ -f "$FILE" ]; then
-        echo "$FILE exists."
+        echo "$servn exists."
     else         
         echo "#### $servn ###
         <VirtualHost *:80>
@@ -33,7 +33,7 @@ do
         SSLCertificateKeyFile /etc/apache2/ssl/cert-key.pem
         </VirtualHost>" > $FILE
         
-        echo "$servn Virtual host created !"
+        echo "$servn Virtual host created ✅"
     fi
 done
 cd ..
